@@ -1,0 +1,12 @@
+{%extends "personal/header.html"%}
+
+{%block content%}
+<div class="col-xs-12" style="height:60px;"></div>
+	{%for post in object_list%}
+	<div class="col-xs-12" style="padding:2%;">
+	<h2> Index of Posts </h2>
+	<br></br>
+	<h5>   {{post.id}})  {{post.date|date:"Y-m-d"}}  <a href="/blog/{{post.id}}">    {{post.title}}  </a><h5>
+	</div>
+	{%endfor%}
+{%endblock%}
